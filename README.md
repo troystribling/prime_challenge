@@ -73,7 +73,7 @@ An inefficiency of the algorithm is that none prime numbers will have multiple u
 
 ## Performance
 
-The largest value of n tested was 10,000,000. Larger values ran into memory issues which severely degraded performance. The table columns are the number of primes, the algorithm run rime and the total number of iterations of the inner loop. Upon examining the Run Time and Iterations it is seen that the performance scaling with n is slightly worse that linear but much better than quadratic, since as n increases by 10 Run Time and Iterations are increasing by a factor slightly more than 10, as well as increasing, but much less that a factor of 100 which would indicate quadratic scaling.
+The largest value of n tested was 10,000,000. Larger values ran into memory issues which severely degraded performance. The table columns are the number of primes, the algorithm run rime and the total number of iterations of the inner loop. Upon examining the Run Time and Iterations it is seen that the performance scaling with n is slightly worse that linear but much better than quadratic, since as n increases by 10 Run Time and Iterations are increasing by a factor slightly more than 10, and slightly increasing with n, but much less that a factor of 100 which would indicate quadratic scaling.
 
 <table>
   <tr>
