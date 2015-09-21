@@ -15,7 +15,9 @@ def primes_to_val(val)
 	numbers.select{|val| val != 0}
 end
 
-# http://stackoverflow.com/questions/1042717/is-there-a-way-to-find-the-approximate-value-of-the-nth-prime/1069023#1069023
+# Estimating the n'th prime number appears to be a dark art. Developed approximations are only valid over
+# intervals of values of n. The approximations used here were pieced together from this
+# http://stackoverflow.com/questions/1042717/is-there-a-way-to-find-the-approximate-value-of-the-nth-prime
 def n_prime_estimate(n)
 	return [0,2,3,5,7,11][n] if n < 6
 	logn = Math.log(n)
@@ -27,10 +29,11 @@ def n_prime_estimate(n)
 	elsif n >=39017
 		n*(logn + log2n - 0.9385)
 	else
-		n*(logn +log2n)
+		n*(logn + log2n)
 	end.floor
 end
 
+# determine if a number is a prime. algorithm described here
 # https://en.wikipedia.org/wiki/Primality_test
 def is_prime(n)
 	if n <= 1
@@ -57,4 +60,3 @@ def n_primes(n)
 	prime_esitimate = n_prime_estimate(n)
 	primes_to_val(prime_esitimate)[0..n-1]
 end
-
