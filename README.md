@@ -60,7 +60,7 @@ def primes_to_val(val)
 end
 ```
 
-val is the upper bound estimate of the n'th prime. The potential prime numbers are stored in the numbers array whose values are initialized with the index. As numbers are discovered to be not prime their value in numbers is set to zero. When complete only primes will have nonzero values in numbers. The outer loop will range from 2 up to the square root of the estimated n'th prime value but the inner loop will only be run for values of i which are prime and will range from i**2 up to the estimated value of the n'th prime with an increment of i. It follows that the number of interations of the inner loop is,
+val is the upper bound estimate of the n'th prime. The potential prime numbers are stored in the numbers array whose values are initialized with the index. As numbers are discovered to be not prime their value in numbers is set to zero. When complete only primes will have nonzero values. The outer loop will range from 2 up to the square root of the estimated n'th prime value but the inner loop will only be run for values of i which are prime and will range from i**2 up to the estimated value of the n'th prime with an increment of i. It follows that the number of interations of the inner loop is,
 
 ```text
 I(i) = (val - i**2)/i + 1
